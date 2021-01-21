@@ -1,15 +1,10 @@
 .box {
-    background: blue;
+    background: peru;
     width: 200px;
     height: 200px;
-    display: inline-block;
     color: white;
 }
 
-.box:nth-child(2){
-    margin-left: 45px;
-}
-
-.box:nth-child(3){
-    margin-left: 45px;
+.wrapper{
+    display: flex;
 }
