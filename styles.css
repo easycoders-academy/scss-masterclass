@@ -1,16 +1,23 @@
-.box {
+.parent{
+    display: flex;
+    /* Главная ось */
+    justify-content: space-around;
+    height: 100vh;
+}
+
+.child {
     background: peru;
     width: 200px;
     height: 200px;
     color: white;
+    font-size: 50px;
 }
 
-.wrapper{
-    display: flex;
-    flex-direction: column;
-    /* Главная ось */
-    justify-content: space-around;
-    /* Перпендикулярная ось */
-    align-items: center;
-    height: 100vh;
+.child:nth-child(1){
+    order: 2;
+    align-self: center;
+}
+
+.child:nth-child(2){
+    order: 3;
 }
