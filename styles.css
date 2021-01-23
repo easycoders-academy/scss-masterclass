@@ -4,16 +4,16 @@ body {
 
 .parent{
     display: flex;
+    flex-direction: column;
     /* Главная ось */
-    justify-content: space-between;
-    align-content: space-around;
+    justify-content: space-around;
+    width: 100%;
     height: 100vh;
 }
 
 .child {
+    flex-basis: 30%;
     background: peru;
-    width: 300px;
-    height: 200px;
     color: white;
     font-size: 50px;
     display: flex;
@@ -23,9 +23,5 @@ body {
 
 .child:nth-child(2){
     background-color: black;
-    flex-grow: 3;
-}
-
-.child:nth-child(3){
     flex-grow: 1;
 }
