@@ -2,7 +2,9 @@
     display: flex;
     /* Главная ось */
     justify-content: space-around;
-    height: 100vh;
+    align-content: space-around;
+    flex-wrap: wrap;
+    height: 200vh;
 }
 
 .child {
@@ -11,13 +13,7 @@
     height: 200px;
     color: white;
     font-size: 50px;
-}
-
-.child:nth-child(1){
-    order: 2;
-    align-self: center;
-}
-
-.child:nth-child(2){
-    order: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
