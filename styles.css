@@ -1,19 +1,31 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 .parent{
     display: flex;
     /* Главная ось */
-    justify-content: space-around;
+    justify-content: space-between;
     align-content: space-around;
-    flex-wrap: wrap;
-    height: 200vh;
+    height: 100vh;
 }
 
 .child {
     background: peru;
-    width: 200px;
+    width: 300px;
     height: 200px;
     color: white;
     font-size: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.child:nth-child(2){
+    background-color: black;
+    flex-grow: 3;
+}
+
+.child:nth-child(3){
+    flex-grow: 1;
 }
