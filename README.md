@@ -22,7 +22,7 @@
 - [x] column-gap
 - [x] row-gap
 - [x] gap
-- [] grid-template-areas
+- [x] grid-template-areas
 - [] grid-column-start
 - [] grid-column-end
 - [] grid-row-start
