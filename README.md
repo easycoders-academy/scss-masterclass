@@ -29,7 +29,7 @@
 - [x] grid-row-end
 - [x] grid-column
 - [x] grid-row
-- [] grid-template
+- [x] grid-template
 - [] justify-items
 - [] align-items
 - [] place-items
@@ -46,7 +46,7 @@
 ### Ключевые слова и функции:
 
 - [x] repeat
-- [] fr
+- [x] fr
 - [] minmax
 - [] auto-fit
 - [] auto-fill
