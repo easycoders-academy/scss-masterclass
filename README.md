@@ -45,7 +45,7 @@
 
 ### Ключевые слова и функции:
 
-- [] repeat
+- [x] repeat
 - [] fr
 - [] minmax
 - [] auto-fit
