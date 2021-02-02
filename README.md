@@ -33,9 +33,9 @@
 - [x] justify-items
 - [x] align-items
 - [x] place-items
-- [] justify-content
-- [] align-content
-- [] place-content
+- [x] justify-content
+- [x] align-content
+- [x] place-content
 - [] justify-self
 - [] align-self
 - [] place-self
