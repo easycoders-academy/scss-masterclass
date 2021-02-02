@@ -6,17 +6,11 @@ body {
     color: white;
     display: grid;
     gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(20px, max-content));
     grid-auto-rows: 100px;
+    margin-bottom: 30px;
 }
 
-.grid:first-child{
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-}
-
-.grid:last-child{
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-}
-  
 .item:nth-child(even) {
     background-color: #2ecc71;
 }
