@@ -1,0 +1,31 @@
+%contentBlock {
+    display: flex;
+    margin-bottom: 80px;
+    .content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        background-color: $bg;
+        .wrapper{
+        display: flex;
+        width: 70%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        a {
+            border: 1px solid black;
+            padding: 20px;
+            transition: color 0.3s linear, background 0.3s linear;
+            &:hover {
+                background-color: black;
+                color: white;
+            } 
+        }
+        }
+    }
+    img, div {
+        width: 50%;
+      }
+}
