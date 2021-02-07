@@ -1,155 +1,81 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caladea:ital@0;1&display=swap');
 @import "reset";
 @import "_variables";
-@import "_titles";
-@import "_content";
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Caladea";
-  padding-top: 75px;
-}
-
-body > *:not(.hero, header, footer) {
-  padding: 0px 140px;
-}
-
-i {
-  font-style: italic;
-}
-
-a {
-  @extend %miniTitle;
-  color: black;
-}
-
-h4 {
-  @extend %miniTitle;
-  margin-bottom: 40px;
-}
-h3 {
-  font-size: 36px;
-  text-align: center;
-  margin-bottom: 70px;
-  font-weight: 100;
-}
-
-header {
-  z-index: 1;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: white;
-  height: 75px;
-  display: flex;
-  align-items: center;
-  @extend %miniTitle;
-  nav {
-    width: 100%;
-    padding: 0 140px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  height: 100vh;
+  background-color: $bg;
+  display: grid;
+  grid-template-columns: 1.2fr 2fr 1.2fr;
+  grid-template-rows: 1fr 10fr 1fr;
+  gap: 1px;
+  & > * {
+    background-color: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    ul {
-      display: flex;
-      &:first-child {
-        li {
-          margin-right: 40px;
-        }
-      }
+    color: $bg;
+    text-transform: uppercase;
+    font-size: 22px;
+  }
+  .menu {
+    grid-column-start: -2;
+    transition: color 0.3s linear, background-color 0.3s linear;
+    &:hover{
+      background-color: $bg;
+      color: white;
     }
   }
-}
-
-.hero {
-  height: 100vh;
-  width: 100%;
-  @extend %contentBlock;
-}
-
-.under-hero {
-  height: 80vh;
-  @extend %contentBlock;
-}
-
-.blog {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 60vh);
-  margin-bottom: 80px;
-  .blog__post{
+  .center-image {
+    grid-column: 2 / 2;
+    grid-row: 2 / -2;
+    background-image: url(https://images.unsplash.com/photo-1464802686167-b939a6910659?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2833&q=80);
+    background-size: cover;
+    background-position: center;
+  }
+  .number-row{
     background-color: $bg;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    img {
-      width: 100%;
-      height: 100%;
-    }
-    &:nth-child(odd){
-      img {
-        order: 1;
-      }
-    }
-    .post__content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      .post__date {
-        @extend %miniTitle;
-        margin-bottom: 60px;
-      }
-    }
-  }
-}
-
-.galery {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 290px);
-  margin-bottom: 100px;
-  .gallery__poster {
+    gap: 1px;
+    grid-template-columns: 1fr;
     height: 100%;
-    cursor: pointer;
-    img{
-      max-width: 100%;
-      height: 100%;
-      transition: opacity 0.3s linear;
+    align-items: stretch;
+    .number {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      cursor: pointer;
+      transition: color 0.3s linear, background-color 0.3s linear;
       &:hover{
-        opacity: 0.5;
+        background-color: $bg;
+        color: white;
       }
+    }
+  }
+  .scrolling__text {
+    grid-column-start: 2;
+    white-space: nowrap;
+    overflow: hidden;
+    
+    span {
+      animation: scrollText 3s linear infinite forwards;
     }
   }
 }
 
-.footer {
-  background-color: $bgFooter;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 65px 0px;
-  .footer__column {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    @extend %miniTitle;
-    .column__title {
-      opacity: 0.5;
-      margin-bottom: 38px;
-    }
-    ul {
-      text-align: center;
-      li {
-        margin-bottom: 15px;
-      }
-    }
-    &:nth-child(2) {
-      border-left: 1px solid black;
-      border-right: 1px solid black;
-    }
+@keyframes scrollText {
+  0% {
+    transform: translateX(-200px);
+  }
+  50% {
+    transform: translateX(200px);
+  }
+  100% {
+    transform: translateX(-200px);
   }
 }
