@@ -70,6 +70,6 @@
 - [x] [https://schwartzmedia.com.au/](https://schwartzmedia.com.au/)
 - [x] [https://tolv.dk/](https://tolv.dk/)
 - [x] [https://rodicdavidson.co.uk/](https://rodicdavidson.co.uk/)
-- [] [https://beige.de/](https://beige.de/)
+- [x] [https://beige.de/](https://beige.de/)
 - [] [https://canalstreet.market/](https://canalstreet.market/)
 - [] [https://wonhundred.com/](https://wonhundred.com/)
