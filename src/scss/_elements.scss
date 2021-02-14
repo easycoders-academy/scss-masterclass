@@ -1,0 +1,12 @@
+%btn {
+    text-transform: lowercase;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    padding: 20px 60px;
+    transition: background-color 0.2s linear;
+    &:hover {
+        color: white;
+        background-color: black;
+    }
+}
